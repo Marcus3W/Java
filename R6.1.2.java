@@ -8,7 +8,8 @@ public class R6_1 {
 
     public static void main (String[] args)
     {
-        int[] array = new int[10];
+        int[] array = new int[11];
+        
         for (int i = 0; i < array.length; i++)
             array[i] = i * 2;
 
