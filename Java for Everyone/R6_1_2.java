@@ -1,8 +1,8 @@
+import java.util.Arrays;
+
 /** Write code that fills an array values with each set of numbers below.
  *  0 2 4 6 8 10 12 14 16 18 20
  */
-
-import java.util.Arrays;
 
 public class R6_1_2 {
 
