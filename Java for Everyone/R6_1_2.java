@@ -4,7 +4,7 @@
 
 import java.util.Arrays;
 
-public class R6_1 {
+public class R6_1_2 {
 
     public static void main (String[] args)
     {
