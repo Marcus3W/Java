@@ -36,9 +36,9 @@ public class R6_2 {
         int[] d = { 1, 2, 3, 4, 5, 4, 3, 2, 1, 0 };
         total = 0;
 
-        //for (int i = 2; i <= 10; i++) { total = total + d[i]; }
+        for (int i = 2; i <= 10; i++) { total = total + d[i]; }
 
-        System.out.println("R6.2.4 - Total is: Out of Bounds Error "); // * Out of Bounds Error *
+        System.out.println("R6.2.4 - Total is: " + total); // * Out of Bounds Error *
 
         //--------------------------------------------------------------------//
 
