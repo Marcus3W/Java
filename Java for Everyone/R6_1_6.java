@@ -13,7 +13,7 @@ public class R6_1 {
 
         for (int i = 0; i < array.length; i++)
         {
-            array[i] = i % 2 == 0 ? 0 : 1;
+            array[i] = i % 2;
         }
         
         System.out.println(Arrays.toString(array));
