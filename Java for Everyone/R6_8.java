@@ -17,7 +17,7 @@ public class R6_8 {
 
         System.out.print("\n" + "Part 1 - Total of the array is: " + total( array ));
         System.out.print("\n" + "Part 2 - Was target in array? " + findTarget( array, 22.5));
-        System.out.print("\n" + "Part 3 - " + (Arrays.toString(multiple_element_by_factor( array, 5))));
+        System.out.print("\n" + "Part 3 - " + (Arrays.toString(multiple_element_by_factor( array ))));
     }
 
     // Part 1 - for (double x : values) { total = total + x;
@@ -48,7 +48,7 @@ public class R6_8 {
     {
         for (int i = 0; i < array.length; i++)
         {
-            array[i] = 2 * factor;
+            array[i] = 2 * array[i];
         }
         return array;
     }
