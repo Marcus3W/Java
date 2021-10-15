@@ -60,12 +60,14 @@ public class week2 {
      * @return whether the card number is valid or invalid
      */
     public static String checkDigits(int num) {
-        final int CARD_LENGTH = 7;
+        // get card number length
+        int card_length = getCardNumberLength(num);
+
         int sum = 0;
         int result;
         boolean check;
 
-        for (int i= 1; i <= CARD_LENGTH; i++) {
+        for (int i= 1; i <= card_length; i++) {
             check = i % 2 == 0; // check if true or false (even or odd)
             result = decode((num % 10), check); // get number from decode check
             num = num / 10; // remove last digit from card number
@@ -77,7 +79,17 @@ public class week2 {
         }
         return "Invalid";
     }
-
+    /**
+     * QUESTION 3 & 4 Auxiliary function to get the length of the card number.
+     *
+     * @param cardNumber takes the full card number
+     * @return the length of the card number
+     */
+    public static int getCardNumberLength(int cardNumber) {
+        int card_length = 0;
+        while (cardNumber > 0) { cardNumber /= 10; card_length++; }
+        return card_length;
+    }
 
 
 
@@ -95,7 +107,7 @@ public class week2 {
                 + width + " is: "
                 + areaOfRectangle(length, width)); //Q2
         */
-        /* Q3 & 4
+        /*Q3 & 4
         int num = 2315778;
         System.out.println("CC number: " + num + " is " + checkDigits(num));
         num = 1234567;
@@ -104,7 +116,7 @@ public class week2 {
         System.out.println("CC number: " + num + " is " + checkDigits(num));
         num = 1111111;
         System.out.println("CC number: " + num + " is " + checkDigits(num));
-         */
+        */
 
 
     }
