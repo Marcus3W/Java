@@ -1,6 +1,7 @@
 package Week1_labs;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class week2 {
 
@@ -21,6 +22,7 @@ public class week2 {
         return a + b;
     }
 
+    
     /**
      * QUESTIONS 2 - Calculate the area of a rectangle
      *
@@ -32,6 +34,7 @@ public class week2 {
         return (length * width);
     }
 
+    
     /**
      * QUESTION 3 - Credit card number validation
      * Notes -
@@ -93,6 +96,7 @@ public class week2 {
         return card_length;
     }
 
+    
     /**
      * QUESTION 5 - Perform a series of tasks
      *
@@ -126,6 +130,7 @@ public class week2 {
         }
     }
 
+    
     /**
      * QUESTION 6 - Move the the elements of an array to the left 'n' places
      *
@@ -149,13 +154,15 @@ public class week2 {
         return arr2;
     }
 
+    
     /**
      * QUESTION 7 - SEE NEW CLASS CustomerLister
-    /**
-    
-     * QUESTION 8 - SEE NEW CLASS ArrayListRunner
      */
 
+    
+    /**
+     * QUESTION 8 - SEE NEW CLASS ArrayListRunner
+     */
     public static void ArrayListRunner() {
         ArrayList<String> names = new ArrayList<>();
         System.out.println("Original array: " + names);
@@ -197,8 +204,87 @@ public class week2 {
         System.out.println("Print names2: " + names2);
     }
 
+    
+    /**
+     * QUESTION 9 - Write a program to:
+     * (a) number of items entered before -1,
+     * (b) the average of the input numbers,
+     * (c) the standard deviation of the even numbers,
+     * (d) the sum of the odd numbers.
+     */
+    public static void question9() {
+        int sum = 0;
+        int element = 0;
+        ArrayList<Integer> numbers = new ArrayList<>();
+        Scanner in = new Scanner(System.in);
+
+        while (element != -1) {
+            System.out.println("Enter a positive integers, enter -1 to quit:");
+            while (in.hasNext()) {
+                element = in.nextInt();
+                if (element == -1) {
+                    break;
+                }
+                numbers.add(element);
+                sum += element;
+            }
+        }
+        // GET ODD & EVEN ARRAYS
+        ArrayList<Integer> odds = new ArrayList<>();
+        ArrayList<Integer> evens = new ArrayList<>();
+        for (int num : numbers) {
+            if (num % 2 == 0) {
+                evens.add(num);
+            } else
+                { odds.add(num);
+            }
+        }
+        // PRINT STATEMENTS
+        for (int num : numbers) {
+            System.out.println("Entered number: " + num);
+        }
+        System.out.println("# of items: " + numbers.size());
+        System.out.println("Average: " + sum / numbers.size());
+        System.out.println("Standard deviation of even numbers: +" + calculateStandardDeviation(evens));
+        System.out.println("Sum of odd numbers: " + sumOfOdds(odds));
+    }
+    /**
+     * QUESTION 9 - AUXILIARY FUNCTION #1
+     * Calculate the sum of all odd elements in the Array
+     * @param oddNumbers Array of odd elements only
+     * @return sum of odd elements
+     */
+    public static int sumOfOdds(ArrayList<Integer> oddNumbers) {
+        int sum = 0;
+        for (int num : oddNumbers) {
+            sum += num;
+        }
+        return sum;
+    }
+    /**
+     * QUESTION 9 - AUXILIARY FUNCTION #2
+     * Calculate the standard deviation of the EVEN elements of the array only
+     * @param evenNumbers Array of even elements only
+     * @return standard deviation
+     */
+    public static double calculateStandardDeviation(ArrayList<Integer> evenNumbers) {
+        double sum = 0.0;
+        double standardDeviation = 0.0;
+        int length = evenNumbers.size();
+
+        for (double num : evenNumbers) {
+                sum += num;
+        }
+        double mean = sum/length;
+
+        for (double num : evenNumbers) {
+                standardDeviation += Math.pow(num - mean, 2);
+        }
+        return Math.sqrt(standardDeviation/length);
+    }
 
 
+    
     
     public static void main(String[] args) {
 
@@ -247,11 +333,13 @@ public class week2 {
         */
 
         /* QUESTION 7 - SEE NEW CLASS CustomerLister  */
-        
+
         /* QUESTION 8
         ArrayListRunner();
         */
-        
 
+        /* QUESTION 9
+        question9();
+         */
     }
 }
