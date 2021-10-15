@@ -150,13 +150,12 @@ public class week2 {
     }
 
     /**
-     * QUESTION 7 - See new Class created - CustomerLister
+     * QUESTION 7 - SEE NEW CLASS CustomerLister
+    /**
+    
+     * QUESTION 8 - SEE NEW CLASS ArrayListRunner
      */
 
-    /**
-     * QUESTION 8 - ArrayLists
-     *
-     */
     public static void ArrayListRunner() {
         ArrayList<String> names = new ArrayList<>();
         System.out.println("Original array: " + names);
@@ -178,28 +177,30 @@ public class week2 {
         // d)
         System.out.println("d) Last name using .size(): " +  names.get(names.size()-1));
         // e)
-        names.set(0, "Anna");       
+        names.set(0, "Anna");
         System.out.println("e) Replaced Alice with Anna. Print name[0]: " + names.get(0));
-        // f) ALTERNATIVE ADD? READ UP ON THIS TO CHECK
-        
+        // f)  array_name.add(index, String)
+        names.add(4, "Doug");
+        System.out.println("f) Added Doug after David - this inserts a new name: " + names.get(4));
         // g)
         System.out.println("g) Enhanced for loop print all names: ");
         for (String name : names) {
-            System.out.println(name);
+            System.out.println("-- " + name);
         }
         // h)
-        
-        // i)
-
+        ArrayList<String> names2 = new ArrayList<>(names);
+        System.out.println("h) Create new array from first array: " + names2);
+        // i) .remove
+        System.out.println("i) Remove Anna (name(0)) from the array: ");
+        names.remove(0);
+        System.out.println("Print names: " + names);
+        System.out.println("Print names2: " + names2);
     }
 
 
 
-
-
+    
     public static void main(String[] args) {
-        ArrayListRunner(); //Q8
-
 
         /* Q1
         int x = 100000;
@@ -245,14 +246,12 @@ public class week2 {
         // should print { 21, 7, 9, 18, 2, 100, 8, 4, 5 };
         */
 
-        /* QUESTION 7
-
-         */
-
-
+        /* QUESTION 7 - SEE NEW CLASS CustomerLister  */
+        
+        /* QUESTION 8
+        ArrayListRunner();
+        */
+        
 
     }
-
-
-
 }
