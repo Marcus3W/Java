@@ -157,6 +157,23 @@ public class week2 {
     
     /**
      * QUESTION 7 - SEE NEW CLASS CustomerLister
+     *
+     * package Week1_labs;
+     *
+     * import java.util.Arrays;
+     *
+     * public class CustomerLister {
+     *
+     *     public static void main(String[] args) {
+     *         String[] customerName = new String[5];
+     *         customerName[0] = "Cathy";
+     *         customerName[1] = "Ben";
+     *         customerName[2] = "Jorge";
+     *         customerName[3] = "Wanda";
+     *         customerName[4] = "Freddie";
+     *         System.out.println(Arrays.toString(customerName));
+     *     }
+     * }
      */
 
     
