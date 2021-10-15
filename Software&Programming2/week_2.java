@@ -1,5 +1,7 @@
 package Week1_labs;
 
+import java.util.ArrayList;
+
 public class week2 {
 
     /**
@@ -18,6 +20,7 @@ public class week2 {
         b = 6;
         return a + b;
     }
+
     /**
      * QUESTIONS 2 - Calculate the area of a rectangle
      *
@@ -133,7 +136,7 @@ public class week2 {
     public static double[] rotate(double[] x, int n) {
         double[] arr2 = new double[x.length];   // Create new array
         boolean flag = false;                   // set flag to false to escape inner loop
-        
+
         for (int i = 0; i <= n; i++) {          // loop 'n' number of times
             if ( !flag ) {                      // add elements to new array from 'n' minus the length of the array
                 for (int j = 0; j < x.length-n; j++) {
@@ -146,12 +149,56 @@ public class week2 {
         return arr2;
     }
 
-    
+    /**
+     * QUESTION 7 - See new Class created - CustomerLister
+     */
+
+    /**
+     * QUESTION 8 - ArrayLists
+     *
+     */
+    public static void ArrayListRunner() {
+        ArrayList<String> names = new ArrayList<>();
+        System.out.println("Original array: " + names);
+        // a)
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Connie");
+        names.add("David");
+        names.add("Edward");
+        names.add("Fran");
+        names.add("Gomez");
+        names.add("Harry");
+        System.out.println("a) Add names: " + names);
+        // b)
+        System.out.println("b) First name: " + names.get(0)
+                + " & Second name : " + names.get(7));
+        // c)
+        System.out.println("c) Size of array: " + names.size());
+        // d)
+        System.out.println("d) Last name using .size(): " +  names.get(names.size()-1));
+        // e)
+        names.set(0, "Anna");       
+        System.out.println("e) Replaced Alice with Anna. Print name[0]: " + names.get(0));
+        // f) ALTERNATIVE ADD? READ UP ON THIS TO CHECK
+        
+        // g)
+        System.out.println("g) Enhanced for loop print all names: ");
+        for (String name : names) {
+            System.out.println(name);
+        }
+        // h)
+        
+        // i)
+
+    }
+
+
 
 
 
     public static void main(String[] args) {
-
+        ArrayListRunner(); //Q8
 
 
         /* Q1
@@ -159,6 +206,7 @@ public class week2 {
         int y = 3;
         System.out.println("x: " + x + " y: " + y + " Sum: " + sum(x, y));
         */
+
         /* Q2
         double length = 3.4;
         double width = 8.4;
@@ -167,6 +215,7 @@ public class week2 {
                 + width + " is: "
                 + areaOfRectangle(length, width)); //Q2
         */
+
         /*Q3 & 4
         int num = 2315778;
         System.out.println("CC number: " + num + " is " + checkDigits(num));
@@ -182,7 +231,6 @@ public class week2 {
         questionFive();
          */
 
-
         /* QUESTION 6
                 double[] x = {8, 4, 5, 21, 7, 9, 18, 2, 100};
                 System.out.println("Before rotation: ==============================");
@@ -196,6 +244,10 @@ public class week2 {
                 }
         // should print { 21, 7, 9, 18, 2, 100, 8, 4, 5 };
         */
+
+        /* QUESTION 7
+
+         */
 
 
 
