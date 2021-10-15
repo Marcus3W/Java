@@ -103,7 +103,7 @@ public class week2 {
      * (h) Use a standard for loop to print all the values in the array in reverse order with labels to indicate what each element is.
      * (i) Use an enhanced for loop to print all the values in the array without labels.
      */
-    public static void questionSix() {
+    public static void questionFive() {
         double[] x = {8, 4, 5, 21, 7, 9, 18, 2, 100};   //a)
         System.out.println(x.length);                   //b)
         System.out.println(x[0]);                       //c)
@@ -121,18 +121,39 @@ public class week2 {
         for (double element : x) {
             System.out.println(element);
         }
-
     }
 
+    /**
+     * QUESTION 6 - Move the the elements of an array to the left 'n' places
+     *
+     * @param n integer to rotate array digits by
+     * @param x array of doubles
+     * @return array with elements moved 'n' positions left
+     */
+    public static double[] rotate(double[] x, int n) {
+        double[] arr2 = new double[x.length];   // Create new array
+        boolean flag = false;                   // set flag to false to escape inner loop
+        
+        for (int i = 0; i <= n; i++) {          // loop 'n' number of times
+            if ( !flag ) {                      // add elements to new array from 'n' minus the length of the array
+                for (int j = 0; j < x.length-n; j++) {
+                    arr2[j] = x[j+n];
+                }
+                flag = true;                    // once actioned '6' times (n - array length) - leave loop.
+            }
+            arr2[x.length-(n-i)] = x[i];        // Re-add the first 3 elements to the end
+        }
+        return arr2;
+    }
 
-
-
-
-
+    
 
 
 
     public static void main(String[] args) {
+
+
+
         /* Q1
         int x = 100000;
         int y = 3;
@@ -157,7 +178,26 @@ public class week2 {
         System.out.println("CC number: " + num + " is " + checkDigits(num));
         */
 
-        questionSix();
+        /* QUESTION 5
+        questionFive();
+         */
+
+
+        /* QUESTION 6
+                double[] x = {8, 4, 5, 21, 7, 9, 18, 2, 100};
+                System.out.println("Before rotation: ==============================");
+                for (int i = 0; i < x.length; i++) {
+                    System.out.println("x[" + i + "]: " + x[i]);
+                }
+                x = rotate(x, 3);
+                System.out.println("After rotation: ==============================");
+                for (int i = 0; i < x.length; i++) {
+                    System.out.println("x[" + i + "]: " + x[i]);
+                }
+        // should print { 21, 7, 9, 18, 2, 100, 8, 4, 5 };
+        */
+
+
 
     }
 
