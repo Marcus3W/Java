@@ -36,7 +36,7 @@
 <h3 align="center">Java Projects</h3>
 
   <p align="center">
-    project_description
+    A series of Java projects / university modules. They will be far reaching and include text book examples
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
