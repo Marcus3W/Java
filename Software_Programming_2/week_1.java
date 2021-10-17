@@ -1,4 +1,4 @@
-package Week1_labs;
+package Labs.week1;
 
 import java.util.*;
 
@@ -38,19 +38,19 @@ public class week1 {
         // d divided c (17 / 4)
         // Answer is 4
         System.out.println(d + a / d + b);
-        // a divided by d, then left to right, a + answer + b
-        // (17 + (3 / 17) + 4) = 21.176
-        // Answer is 21.176
+        // 3 is divided by 17 with quotient 0
+        // 17 is added to 0 with sum 17
+        // 17 is added to 4 with sum 21
         System.out.println((d + a) / (d + b));
-        // a divided by d, a + answer + b
-        // (17 + 3) / (17 + 4) = 20 / 21 = 0.95
-        // Answer is 0.95
+        // 17 is added to 3 with sum 20
+        // 17 is added to 4 with sum 21
+        // 20 is divided by 21 with quotient 0
         System.out.println(Math.sqrt(b));
         // Squared root of 4
-        // Answer is 2
+        // Answer is 2.0
         System.out.println(Math.pow(a, b));
         // a to the power b ( 3^4 )
-        // Answer is 81
+        // Answer is 81.0
         System.out.println(Math.abs(-a));
         // abs makes a number positive -3 = 3
         // Answer is 3
@@ -79,6 +79,18 @@ public class week1 {
             System.out.println("Largest is " + largest);
         }
     }
+
+    // CLASS SOLUTION
+    public static void Smaller() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter two integers separated by one or more spaces");
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        System.out.println("The smaller integer is " + Math.min(a, b));
+    }
+
+
+
     /**
      * QUESTION 5
      * Use the first approach to increment x in the program below. Print the value of x after incrementing.
@@ -87,7 +99,7 @@ public class week1 {
     public static void incrementDemo() {
         int x = 10;
         int y = -3;
-        x++;
+        x = x + 1;
         System.out.println(x);
         y++;
         System.out.println(y);
@@ -234,9 +246,10 @@ public class week1 {
             colour = "blue";
 
         // better solution
-        String colour = "blue";
-        if (x < 10)
-            colour = "red";
+         String colour = "red";
+         if (x >= 10) {
+            colour = "blue";
+         }
     */
     /**
      * QUESTION 14
@@ -278,8 +291,6 @@ public class week1 {
     /**
      * QUESTION 16
      *
-     * THIS ISN'T WORKING
-     *
      * Write a program that prompts the user to enter three strings.
      * Compare the String objects lexicographically (similar to the order in a lexicon) and print the middle-valued string.
      * To compare two String objects lexicographically, you can write s1.compareTo(s2) and get an int value as a result.
@@ -290,22 +301,36 @@ public class week1 {
      */
     public static void compareStringsLex() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter string number 1: ");
-        String first = scan.next();
-        System.out.println("Enter string number 2: ");
-        String second = scan.next();
-        System.out.println("Enter string number 3: ");
-        String third = scan.next();
-
-        if (first.compareTo(second) <= first.compareTo(third)) {
-            System.out.println(first);
+        System.out.println("Enter string 1:");
+        String str1 = scan.next();
+        System.out.println("Enter string 2:");
+        String str2 = scan.next();
+        System.out.println("Enter string 3:");
+        String str3 = scan.next();
+        String middle = str1; // Assume str1 is the middle string
+        // Check to see if str2 is in the middle
+        if (str1.compareTo(str2) <= 0) {
+            if (str2.compareTo(str3) <= 0) {
+                middle = str2; // Change to str2
+            }
         }
-        else if (first.compareTo(third) <= second.compareTo(third)) {
-            System.out.println(second);
+        if (str3.compareTo(str2) <= 0) {
+            if (str2.compareTo(str1) <= 0) {
+                middle = str2; // Change to str2
+            }
         }
-        else {
-            System.out.println(third);
+        // Check to see if str3 is in the middle
+        if (str1.compareTo(str3) <= 0) {
+            if (str3.compareTo(str2) <= 0) {
+                middle = str3; // Change to str3
+            }
         }
+        if (str2.compareTo(str3) <= 0) {
+            if (str3.compareTo(str1) <= 0) {
+                middle = str3; // Change to str3
+            }
+        }
+        System.out.println("The middle string is " + middle);
     }
     /**
      * QUESTIONS 17
@@ -315,20 +340,28 @@ public class week1 {
      */
     public static void compareStringsLexReworked() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter string number 1: ");
-        String first = scan.next();
-        System.out.println("Enter string number 2: ");
-        String second = scan.next();
-        System.out.println("Enter string number 3: ");
-        String third = scan.next();
-
-        if ((first.compareTo(second) <= first.compareTo(third)) && ((first.compareTo(second) <= second.compareTo(third)))) {
-            System.out.println("Mid =" + second);
-        } else if ((first.compareTo(third) <= first.compareTo(second)) && ((first.compareTo(third) >= second.compareTo(third)))) {
-            System.out.println("Mid =" + third);
-        } else {
-            System.out.println("Mid =" + first);
+        System.out.println("Enter string 1:");
+        String str1 = scan.next();
+        System.out.println("Enter string 2:");
+        String str2 = scan.next();
+        System.out.println("Enter string 3:");
+        String str3 = scan.next();
+        String middle = str1; // Assume str1 is the middle string
+        // Check to see if str2 is in the middle
+        if ((str1.compareTo(str2) <= 0) && (str2.compareTo(str3) <= 0)) {
+            middle = str2; // Change to str2
         }
+        if ((str3.compareTo(str2) <= 0) && (str2.compareTo(str1) <= 0)) {
+            middle = str2; // Change to str2
+        }
+        // Check to see if str3 is in the middle
+        if ((str1.compareTo(str3) <= 0) && (str3.compareTo(str2) <= 0)) {
+            middle = str3; // Change to str3
+        }
+        if ((str2.compareTo(str3) <= 0) && (str3.compareTo(str1) <= 0)) {
+            middle = str3; // Change to str3
+        }
+        System.out.println("The middle string is " + middle);
     }
     /**
      * QUESTION 18
@@ -341,16 +374,14 @@ public class week1 {
 
         if (x < y) {
             System.out.println("aaa");
-        }
-        if (x < z) {
-            System.out.println("bbb");
+            if (x < z) {
+                System.out.println("bbb");
+            }
         } else {
             System.out.println("ccc");
         }
         System.out.println("ddd");
-
         if (y > z) {
-
             if (z > x) {
                 System.out.println("eee");
             } else {
@@ -468,9 +499,20 @@ public class week1 {
     }
     /**
      * QUESTION 24
-     * Rewrite the program from Question 23 using a for loop. Repeat the exercise again but this time use a do-while loop.
+     * Rewrite the program from Question 23 using a for loop.
+     * Repeat the exercise again but this time use a do-while loop.
      *
      */
+
+    public static void sumForWhileLoop() {
+        int n = 100;
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum = sum + i;
+        }
+        System.out.println("The sum of 1 + 2 + ... + " + n + " is " + sum);
+    }
+
     public static void sumDoWhileLoop() {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a number: ");
@@ -491,14 +533,19 @@ public class week1 {
      * The program should stop whenever the user enters "q" to quit
      */
     public static void inputSumWhileLoop() {
+        double total = 0;
+        int count = 0;
+        double inputValue;
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter a positive, negative integer or zero: ");
-        int sum = 0;
-        while (in.hasNextInt()) {
-            int number = in.nextInt();
-            sum += number;
+        System.out.println("Enter a number or type 'q' to Quit");
+        while (in.hasNextDouble()) {
+            inputValue = in.nextDouble();
+            total = total + inputValue;
+            count = count + 1;
+            System.out.println("Enter a number or type 'q' to Quit");
         }
-        System.out.println("The sum total of what you entered was: " + sum);
+        System.out.println("The total was " + total + ".");
+        System.out.println("You typed " + count + " values.");
     }
     /**
      * QUESTION 26
@@ -519,6 +566,17 @@ public class week1 {
             }
         }
     }
+
+    // CLASS SOLUTION
+    public static void forLoopXCLASS() {
+        for (int i = 1; i < 6; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("X");
+            }
+            System.out.println();
+        }
+    }
+
     /**
      * QUESTION 27
      * Convert the following while loop to a do loop.
@@ -556,7 +614,10 @@ public class week1 {
      *
      * Is the do loop in the previous question an improvement over the while loop? Why or why not?
      *
-     * ANSWER =
+     * ANSWER = The loops are very similar. The do loop does not represent a significant improvement,
+     *          although it does eliminate the need for the trick of initialising n to 1 (so that
+     *          it passes the first loop condition). Furthermore, it is more natural to use the do loop
+     *          when at least one iteration is to be performed.
      */
 
     /**
@@ -631,11 +692,3 @@ public class week1 {
         //forToWhile();//Q30
     }
 }
-
-
-
-
-
-
-
-
