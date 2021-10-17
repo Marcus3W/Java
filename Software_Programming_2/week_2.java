@@ -1,4 +1,4 @@
-package Week1_labs;
+package Labs.week2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -22,7 +22,7 @@ public class week2 {
         return a + b;
     }
 
-    
+
     /**
      * QUESTIONS 2 - Calculate the area of a rectangle
      *
@@ -34,7 +34,7 @@ public class week2 {
         return (length * width);
     }
 
-    
+
     /**
      * QUESTION 3 - Credit card number validation
      * Notes -
@@ -96,7 +96,7 @@ public class week2 {
         return card_length;
     }
 
-    
+
     /**
      * QUESTION 5 - Perform a series of tasks
      *
@@ -130,7 +130,7 @@ public class week2 {
         }
     }
 
-    
+
     /**
      * QUESTION 6 - Move the the elements of an array to the left 'n' places
      *
@@ -154,7 +154,7 @@ public class week2 {
         return arr2;
     }
 
-    
+
     /**
      * QUESTION 7 - SEE NEW CLASS CustomerLister
      *
@@ -176,7 +176,7 @@ public class week2 {
      * }
      */
 
-    
+
     /**
      * QUESTION 8 - SEE NEW CLASS ArrayListRunner
      */
@@ -221,7 +221,7 @@ public class week2 {
         System.out.println("Print names2: " + names2);
     }
 
-    
+
     /**
      * QUESTION 9 - Write a program to:
      * (a) number of items entered before -1,
@@ -253,7 +253,7 @@ public class week2 {
             if (num % 2 == 0) {
                 evens.add(num);
             } else
-                { odds.add(num);
+            { odds.add(num);
             }
         }
         // PRINT STATEMENTS
@@ -290,19 +290,19 @@ public class week2 {
         int length = evenNumbers.size();
 
         for (double num : evenNumbers) {
-                sum += num;
+            sum += num;
         }
         double mean = sum/length;
 
         for (double num : evenNumbers) {
-                standardDeviation += Math.pow(num - mean, 2);
+            standardDeviation += Math.pow(num - mean, 2);
         }
         return Math.sqrt(standardDeviation/length);
     }
 
 
-    
-    
+
+
     public static void main(String[] args) {
 
         /* Q1
