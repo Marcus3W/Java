@@ -6,7 +6,7 @@ import java.util.Arrays;
  *
  */
 
-public class Chp6_3 {
+public class Chapter6_3 {
 
     public static void main(String[] args)
     {

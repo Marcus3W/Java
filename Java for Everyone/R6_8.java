@@ -44,7 +44,7 @@ public class R6_8 {
 
     // Part 3 - int i = 0;
     //          for (double x : values) { values[i] = 2 * x; i++; }
-    public static double[] multiple_element_by_factor (double[] array, double factor)
+    public static double[] multiple_element_by_factor(double[] array)
     {
         for (int i = 0; i < array.length; i++)
         {
