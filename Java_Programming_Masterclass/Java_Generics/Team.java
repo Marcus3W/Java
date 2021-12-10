@@ -2,7 +2,7 @@ package Java_Generics;
 
 import java.util.ArrayList;
 
-public class Team<T extends Player> {
+public class Team<T extends Player> implements Comparable<Team<T>> {
     // adding the extends Player helps up restrict the type of class we can use for team.
     // So we cant use the String class team like on line 18 on the Main class.
     // it needs to be a class derived from 'Player'
@@ -50,7 +50,7 @@ public class Team<T extends Player> {
             message = " drew with ";
         } else {
             lost++;
-            message = "lost to ";
+            message = " lost to ";
         }
         played++;
         if (opponent != null) {
@@ -63,4 +63,14 @@ public class Team<T extends Player> {
         return (won + 2) + tied;
     }
 
+    @Override
+    public int compareTo(Team<T> team) {
+        if (this.ranking() > team.ranking()) {
+            return -1;
+        } else {
+            if (this.ranking() < team.ranking()) {
+                return 1;
+            }
+        } return 0;
+    }
 }
