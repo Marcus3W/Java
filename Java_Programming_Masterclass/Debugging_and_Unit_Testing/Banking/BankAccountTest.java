@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class BankAccountTest {
 
     private BankAccount account;
+    private static int count; // STATIC because we only want one instance of this variable and not linked to objects
 
     /**
      *  MAYBER WE ONLY WANT TO RUN THE METHOD ONCE, UNLIKE THE BELOW WHERE ITS RUN EACH TIME BEFORE EACH TEST
@@ -16,7 +17,7 @@ class BankAccountTest {
      */
     @org.junit.jupiter.api.BeforeAll
     public static void beforeClass() {
-        System.out.println("This executes before any test cases");
+        System.out.println("This executes before any test cases. Count = " + count++);
     }
 
     /**
@@ -60,13 +61,14 @@ class BankAccountTest {
         // when checking boolean, use assertTrue or assertFalse, instead of assertEquals
     }
 
+    /*
     // ASSERT - state a fact or belief confidently and forcefully.
     //        - The first parameter is what we expect, and the second is what we want to test / actual value
     @org.junit.jupiter.api.Test
     public void dummyTest() {
         assertEquals(20,21);
-
     }
+    */
 
     /**
      * AfterAll – denotes that the annotated method will be executed after all
@@ -74,7 +76,12 @@ class BankAccountTest {
      */
     @org.junit.jupiter.api.AfterAll
     public static void AfterClass() {
-        System.out.println("This executes AFTER any test cases");
+        System.out.println("This executes AFTER any test cases. Count = " + count++);
+    }
+
+    @org.junit.jupiter.api.AfterEach
+    public void teardown() {
+        System.out.println("Count = " + count++);
     }
 
 }
