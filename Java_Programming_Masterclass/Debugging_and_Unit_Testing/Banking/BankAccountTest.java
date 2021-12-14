@@ -33,15 +33,28 @@ class BankAccountTest {
 
 
     @org.junit.jupiter.api.Test
-    void deposit() {
+    void deposit() throws Exception  {
         double balance = account.deposit(1000.00, true);
         assertEquals(1500.00, balance, 0); // third param is delta, gives a 'leeway' on double figures
     }
 
     @org.junit.jupiter.api.Test
-    void withdraw() {
+    void withdraw_branch() throws Exception {
         double balance = account.withdraw(300.00, true);
         assertEquals(200.00, balance, 0);
+    }
+
+    /**
+     * EXAMPLE OF THROWING EXCEPTION
+     *
+     * @throws Exception if balance is less that 0.
+     */
+    @org.junit.jupiter.api.Test
+    void withdraw_notBranch() throws Exception {
+        assertThrows(IllegalArgumentException.class, ()-> {
+            double balance = account.withdraw(600.00, false);
+            assertEquals(200.00, balance, 0);
+        });
     }
 
     @org.junit.jupiter.api.Test
