@@ -40,7 +40,8 @@ class BankAccountTest {
 
     @org.junit.jupiter.api.Test
     void withdraw() {
-        fail("This test has yet to be implemented");
+        double balance = account.withdraw(300.00, true);
+        assertEquals(200.00, balance, 0);
     }
 
     @org.junit.jupiter.api.Test
