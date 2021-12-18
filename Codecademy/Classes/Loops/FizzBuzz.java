@@ -1,4 +1,4 @@
-package Classes;
+package Classes.Loops;
 
 public class FizzBuzz {
 

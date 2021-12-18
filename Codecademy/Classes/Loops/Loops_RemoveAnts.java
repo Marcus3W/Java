@@ -1,4 +1,4 @@
-package Classes;
+package Classes.Loops;
 
 import java.util.ArrayList;
 
