@@ -13,9 +13,7 @@ class Spaetzle extends Noodle {
     @Override
     public void cook() {
         System.out.println("Grinding or scraping dough.");
-
         System.out.println("Boiling.");
-
         this.texture = "cooked";
 
     }
