@@ -2,20 +2,43 @@ package Classes.Inheritance_and_Polymorphism;
 
 class Noodle {
 
-    double lengthInCentimeters;
-    String shape;
-    String texture = "brittle";
+    protected double lengthInCentimeters;
+    protected double widthInCentimeters;
+    protected String shape;
+    protected String ingredients;
+    protected String texture = "brittle";
 
-    public void cook() {
+    Noodle(double lenInCent, double wthInCent, String shp, String ingr) {
 
-        this.texture = "cooked";
+        this.lengthInCentimeters = lenInCent;
+        this.widthInCentimeters = wthInCent;
+        this.shape = shp;
+        this.ingredients = ingr;
 
 
     }
 
+    public String getCookPrep() {
+
+        return "Boil noodle for 7 minutes and add sauce.";
+
+    }
+
+
     public static void main(String[] args) {
-        Spaghetti spaghettiPomodoro = new Spaghetti();
-        System.out.println(spaghettiPomodoro.texture);
+
+        Noodle spaghetti, ramen, pho;
+
+        spaghetti = new Spaghetti();
+        ramen = new Ramen();
+        pho = new Pho();
+
+        // Add your code below:
+        Noodle[] allTheNoodles = {spaghetti, ramen, pho};
+
+        for (Noodle noodle : allTheNoodles) {
+            System.out.println(noodle.getCookPrep());
+        }
     }
 
 }
