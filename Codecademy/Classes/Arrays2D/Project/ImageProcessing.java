@@ -18,6 +18,9 @@ public class ImageProcessing {
         twoDToImage(trimmed, "./trimmed_apple.jpg");
         // int[][] allFilters = stretchHorizontally(shrinkVertically(colorFilter(negativeColor(trimBorders(invertImage(imageData), 50)), 200, 20, 40)));
         // Painting with pixels
+
+        negativeColor(imageData);
+
     }
 
 
@@ -39,18 +42,26 @@ public class ImageProcessing {
         }
     }
     public static int[][] negativeColor(int[][] imageTwoD) {
-        // TODO: Fill in the code for this method
         int[][] newArray = new int[imageTwoD.length][imageTwoD[0].length];
 
-        for (int i = 0; i < newArray.length; i++)
-
-
-        return null;
+        for (int i = 0; i < imageTwoD.length; i++)
+            for (int j = 0; j < imageTwoD[i].length; j++) {
+                int[] rgba = getRGBAFromPixel(imageTwoD[i][j]);
+                rgba[0] = 255 - rgba[0];
+                rgba[1] = 255 - rgba[1];
+                rgba[2] = 255 - rgba[2];
+                newArray[i][j] = getColorIntValFromRGBA(rgba);
+            }
+        return newArray;
     }
+
     public static int[][] stretchHorizontally(int[][] imageTwoD) {
         // TODO: Fill in the code for this method
         return null;
     }
+
+
+
     public static int[][] shrinkVertically(int[][] imageTwoD) {
         // TODO: Fill in the code for this method
         return null;
