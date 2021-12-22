@@ -19,8 +19,20 @@ public class ImageProcessing {
         // int[][] allFilters = stretchHorizontally(shrinkVertically(colorFilter(negativeColor(trimBorders(invertImage(imageData), 50)), 200, 20, 40)));
         // Painting with pixels
 
-        negativeColor(imageData);
+        int[][] negative = negativeColor(imageData);
+        twoDToImage(negative, "./negative_apple.jpg");
 
+        int[][] stretchedHImg = stretchHorizontally(imageData);
+        twoDToImage(stretchedHImg, "./stretched_apple.jpg");
+
+        int[][] shrankVImg = shrinkVertically(imageData);
+        twoDToImage(shrankVImg, "./shrank_apple.jpg");
+
+        int[][] invertedImg = invertImage(imageData);
+        twoDToImage(invertedImg, "./inverted_apple.jpg");
+
+        int[][] coloredImg = colorFilter(imageData, -75, 30, -30);
+        twoDToImage(coloredImg, "./colored_apple.jpg");
     }
 
 
@@ -43,7 +55,6 @@ public class ImageProcessing {
     }
     public static int[][] negativeColor(int[][] imageTwoD) {
         int[][] newArray = new int[imageTwoD.length][imageTwoD[0].length];
-
         for (int i = 0; i < imageTwoD.length; i++)
             for (int j = 0; j < imageTwoD[i].length; j++) {
                 int[] rgba = getRGBAFromPixel(imageTwoD[i][j]);
@@ -56,22 +67,46 @@ public class ImageProcessing {
     }
 
     public static int[][] stretchHorizontally(int[][] imageTwoD) {
-        // TODO: Fill in the code for this method
-        return null;
+        int[][] newArray = new int[imageTwoD.length][imageTwoD[0].length*2];
+        int it = 0;
+        for(int i = 0; i < imageTwoD.length; i++) {
+            for(int j = 0; j < imageTwoD[i].length; j++) {
+                it = j * 2;
+                newArray[i][it] = imageTwoD[i][j];
+                newArray[i][it+1] = imageTwoD[i][j];
+            }
+        }
+        return newArray;
     }
-
 
 
     public static int[][] shrinkVertically(int[][] imageTwoD) {
-        // TODO: Fill in the code for this method
-        return null;
+        int[][] newArray = new int[imageTwoD.length/2][imageTwoD[0].length];
+
+        for (int i = 0; i < imageTwoD[0].length; i++) {
+            for (int j = 0; j < imageTwoD.length; j+=2) {
+                newArray[j/2][i] = imageTwoD[j][i];
+            }
+        }
+        return newArray;
     }
+
+
     public static int[][] invertImage(int[][] imageTwoD) {
-        // TODO: Fill in the code for this method
-        return null;
+        int[][] newArray = new int[imageTwoD.length][imageTwoD[0].length];
+
+        for (int i = 0; i < imageTwoD.length; i++) {
+            for (int j = 0; j < imageTwoD[i].length; j++) {
+                newArray[i][j] = imageTwoD[(imageTwoD.length-1)-i][(imageTwoD[i].length-1)-j];
+            }
+        }
+        return newArray;
     }
+
     public static int[][] colorFilter(int[][] imageTwoD, int redChangeValue, int greenChangeValue, int blueChangeValue) {
-        // TODO: Fill in the code for this method
+
+
+
         return null;
     }
     // Painting Methods
