@@ -29,7 +29,18 @@ public class Combining {
         //You want to decrease the brightness of the new image by 50 units. The way this works is that
         //for every integer in the new 2D array, we will subtract the value by 50. Remember that the
         //value range for the pixel is 0-255, so if the result tries to go below 0, just set it equal to 0.
+        for (int i = 0; i < newImage.length; i++) {
+            for (int j = 0; j < newImage[i].length; j++) {
 
+                if (newImage[i][j] <= 50) {
+                    newImage[i][j] = 0;
+                }
+                else {
+                    int value = newImage[i][j];
+                    newImage[i][j] = value - 50;
+                }
+            }
+        }
 
         System.out.println(Arrays.deepToString(newImage));
     }
