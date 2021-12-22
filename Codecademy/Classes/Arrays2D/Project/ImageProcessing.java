@@ -40,6 +40,11 @@ public class ImageProcessing {
     }
     public static int[][] negativeColor(int[][] imageTwoD) {
         // TODO: Fill in the code for this method
+        int[][] newArray = new int[imageTwoD.length][imageTwoD[0].length];
+
+        for (int i = 0; i < newArray.length; i++)
+
+
         return null;
     }
     public static int[][] stretchHorizontally(int[][] imageTwoD) {
