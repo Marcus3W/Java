@@ -29,7 +29,19 @@ public class Node {
         System.out.println(firstNode.getNextNode().data);
         */
 
+        Node strawberry = new Node("Berry Tasty");
+        Node banana = new Node("Banana-rama");
+        Node coconut = new Node("Nuts for Coconut");
 
+        strawberry.setNextNode(banana);
+        banana.setNextNode(coconut);
+
+        Node currentNode = strawberry;
+
+        while (currentNode != null) {
+            System.out.println(currentNode.data);
+            currentNode = currentNode.getNextNode();
+        }
 
     }
 }
