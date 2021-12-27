@@ -2,7 +2,7 @@ package Pass_The_Technical_Interview;
 
 public class Node {
 
-    private String data;
+    public String data;
     private Node next;
 
     public Node(String data) {

@@ -40,16 +40,30 @@ public class LinkedList {
         return removedHead.data;
     }
 
+    public String printList() {
+        String output = "<head> ";
+        Node currentNode = this.head;
+        while (currentNode != null) {
+            output += currentNode.data + " ";
+            currentNode = currentNode.getNextNode();
+        }
+        output += "<tail>";
+        System.out.println(output);
+        return output;
+    }
 
 
     public static void main(String[] args) {
 
-        LinkedList strawberry = new LinkedList();
-        LinkedList banana = new LinkedList();
-        LinkedList coconut = new LinkedList();
-
-        strawberry.addToHead("Head");
-        banana.addToTail("Tail");
-
+        LinkedList seasons = new LinkedList();
+        seasons.printList();
+        seasons.addToHead("summer");
+        seasons.addToHead("spring");
+        seasons.printList();
+        seasons.addToTail("fall");
+        seasons.addToTail("winter");
+        seasons.printList();
+        seasons.removeHead();
+        seasons.printList();
     }
 }
