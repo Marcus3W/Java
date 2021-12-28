@@ -7,6 +7,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Java_Programming_Masterclass" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Software_Programming_2" isTestSource="false" packagePrefix="Labs.week2" />
       <sourceFolder url="file://$MODULE_DIR$/Codecademy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Codility" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/leetCode" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
