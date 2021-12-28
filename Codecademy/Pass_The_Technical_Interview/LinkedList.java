@@ -54,7 +54,6 @@ public class LinkedList {
 
 
     public static void main(String[] args) {
-
         LinkedList seasons = new LinkedList();
         seasons.printList();
         seasons.addToHead("summer");
