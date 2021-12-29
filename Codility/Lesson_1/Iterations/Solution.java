@@ -1,3 +1,5 @@
+package Lesson_1.Iterations;
+
 import org.testng.Assert;
 
 /**
@@ -21,7 +23,7 @@ import org.testng.Assert;
  * Write an efficient algorithm for the following assumptions:
  * N is an integer within the range [1..2,147,483,647].
  */
-public class Lesson1 {
+public class Solution {
     public static int solution(int n) {
         int finalGap = 0;
         if (n <= 1) {
