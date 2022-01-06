@@ -1,7 +1,5 @@
 package Pong;
 
-import org.junit.jupiter.engine.Constants;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;

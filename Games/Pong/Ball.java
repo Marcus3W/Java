@@ -17,39 +17,35 @@ public class Ball {
 
     public void update(double dt) {
 
-        if (vx < 0) {
-            if (this.rect.x <= this.leftPaddle.x + this.leftPaddle.width && this.rect.x + this.rect.width >= this.leftPaddle.x &&
-                this.rect.y >= this.leftPaddle.y && this.rect.y <= this.leftPaddle.y + this.leftPaddle.height) {
-                    this.vx *= -1;
-                    //this.vy *= -1;
-            } else if (this.rect.x + this.rect.width < this.leftPaddle.x) {
-                System.out.println("You have lost a point");
+        if (vy >= 0.0) {
+            if (this.rect.y + (vy * Constants.BALL_SPEED * dt) + this.rect.height > Constants.SCREEN_HEIGHT - Constants.INSETS_BOTTOM) {
+                vy *= -1.0;
             }
-
-        } else if (vx > 0) {
-            if (this.rect.x + this.rect.width >= this.rightPaddle.x && this.rect.x <= this.rightPaddle.x + this.rightPaddle.width &&
-                    this.rect.y >= this.rightPaddle.y && this.rect.y <= this.rightPaddle.y + this.rightPaddle.height) {
-                this.vx *= -1;
-                //this.vy *= -1;
-            } else if (this.rect.x + this.rect.width > this.rightPaddle.x + this.rightPaddle.width) {
-                System.out.println("AI has lost a point");
+        } else if (vy < 0.0) {
+            if (this.rect.y +(vy * Constants.BALL_SPEED * dt) < Constants.TOOLBAR_HEIGHT) {
+                vy *= -1.0;
             }
         }
 
-        if (vy > 0) {
-            if (this.rect.y + this.rect.height > Constants.SCREEN_HEIGHT) {
-                this.vy *= -1;
-            }
-        } else if (vy < 0) {
-            if (this.rect.y < Constants.TOOLBAR_HEIGHT) {
-                this.vy *= -1;
+        if (vx < 0.0) {
+            if (this.rect.x + (vx * Constants.BALL_SPEED * dt) + leftPaddle.x > leftPaddle.width) {
+                if (this.rect.y + (vy * Constants.BALL_SPEED * dt) > leftPaddle.y &&
+                        this.rect.y + (vy * Constants.BALL_SPEED * dt) + this.rect.height < leftPaddle.y + leftPaddle.height) {
+                    vx *= -1.0;
+                }
+
+            } else if (vx >= 0) {
+                if (this.rect.x + (vx * Constants.BALL_SPEED * dt) + rect.width > rightPaddle.x) {
+                    if (this.rect.y + (vy * Constants.BALL_SPEED * dt) > rightPaddle.y &&
+                            this.rect.y + (vy * Constants.BALL_SPEED * dt) + this.rect.height < rightPaddle.y + rightPaddle.height) {
+                        vx *= -1.0;
+                    }
+                }
             }
         }
 
-        // position = position + velocity
-        // velocity = velocity + acceleration
-        this.rect.x += vx + dt;
-        this.rect.y += vy + dt;
+        this.rect.x += vx * Constants.BALL_SPEED * dt;
+        this.rect.y += vy * Constants.BALL_SPEED * dt;
     }
 
 }
