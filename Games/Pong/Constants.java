@@ -19,6 +19,8 @@ public class Constants {
     public static double TOOLBAR_HEIGHT;
     public static double INSETS_BOTTOM;
 
+    public static final double MAX_ANGLE = 45;
+
 
 
 
