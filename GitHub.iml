@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Codecademy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Codility" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/leetCode" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Games" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
