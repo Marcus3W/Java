@@ -1,6 +1,6 @@
 // Cache, Main Memory and HDD calculator
 
-// convertors
+// GET CONVERSIONS
 /*
 Enter this number   metric affix    notation    E-notation  Other
 0.1	                1d (deci)	    10^-1       1e-1        One tenth of a second (10% of a second)
@@ -15,7 +15,6 @@ Enter this number   metric affix    notation    E-notation  Other
 1,000,000,000	    1G (giga)	    10^9	    1e9
 1,000,000,000,000	1T (tera)	    10^12	    1e12
  */
-
 function ns_to(affixTo, ns_amount) {
     let value;
     switch (affixTo) {
@@ -52,21 +51,23 @@ function ms_to(affixTo, ms_amount) {
     }
     return value;
 }
+
+// GET RATIO
 function hit_ration_MM(cache, main_memory) {
     const total_memory = 1; // in percent
     let remaining_memory =  total_memory - cache; // get remaining memory in percent
-    return (main_memory * remaining_memory * 100).toFixed(1) // returns % for main memory
+    return main_memory * remaining_memory // returns % for main memory
 }
 function hit_ration_HDD(cache, main_memory) {
     const total_memory = 1; // in percent
     let remaining_memory =  total_memory - cache; // get remaining memory in percent
     let main_memory_amount = (main_memory * remaining_memory); // returns % for main memory
-    return ((remaining_memory - main_memory_amount) * 100).toFixed(1) ;
+    return (remaining_memory - main_memory_amount) ;
 }
 
 // TOTAL TIME FUNCTIONS
 function calculate_cache(cache_speed, cache_ratio) {
-    return (cache_speed) * cache_ratio;
+    return cache_speed * cache_ratio;
 }
 function calculate_MM(cache_speed, MM_speed, main_memory_ratio) {
     return (MM_speed + cache_speed) * main_memory_ratio;
@@ -77,27 +78,41 @@ function calculate_HDD(cache_speed, MM_speed, HDD_speed_ms, HDD_ratio) {
     return (HDD_speed_ns + MM_speed + cache_speed) * HDD_ratio;
 }
 
-
-function main(cache, main_memory, cache_speed_ns, MM_speed_ns, HDD_speed_ms) {
+// MAIN FUNCTIONS
+function main_cache_MM(cache, main_memory, cache_speed_ns, MM_speed_ns) {
     // GET RATIOS
-    let cache_ratio = cache * 100;
-    let main_memory_ratio = hit_ration_MM(cache,main_memory);
-    console.log('Main Memory ratio is ' + main_memory_ratio);
-    let HDD_ratio = hit_ration_HDD(cache,main_memory);
-    console.log('HDD is ' + HDD_ratio);
-
+    let cache_ratio = cache;
+    let main_memory_ratio = main_memory;
     // GET CACHE TOTAL SPEED
     let cache_total_time = calculate_cache(cache_speed_ns, cache_ratio);
-    console.log(cache_total_time + ' in ns')
-
+    console.log(cache_total_time + ' in ns');
     // GET MAIN MEMORY TOTAL SPEED
     let main_memory_total_time = calculate_MM(cache_speed_ns, MM_speed_ns, main_memory_ratio);
-    console.log(main_memory_total_time + ' in ns')
-
+    console.log(main_memory_total_time + ' in ns');
+    return (parseFloat(cache_total_time + main_memory_total_time).toFixed(2))
+}
+function main_all_three(cache, main_memory, cache_speed_ns, MM_speed_ns, HDD_speed_ms) {
+    // GET RATIOS
+    let cache_ratio = cache;
+    let main_memory_ratio = hit_ration_MM(cache,main_memory);
+    //console.log('Main Memory ratio is ' + main_memory_ratio);
+    let HDD_ratio = hit_ration_HDD(cache,main_memory);
+    //console.log('HDD is ' + HDD_ratio);
+    // GET CACHE TOTAL SPEED
+    let cache_total_time = calculate_cache(cache_speed_ns, cache_ratio);
+    console.log(cache_total_time + ' in ns');
+    // GET MAIN MEMORY TOTAL SPEED
+    let main_memory_total_time = calculate_MM(cache_speed_ns, MM_speed_ns, main_memory_ratio);
+    console.log(main_memory_total_time + ' in ns');
     // GET HDD TOTAL SPEED
     let HDD_total_time = calculate_HDD(cache_speed_ns, MM_speed_ns, HDD_speed_ms, HDD_ratio);
-    console.log(HDD_total_time + ' in ns')
-
-    return cache_total_time + main_memory_total_time + HDD_total_time
+    console.log(HDD_total_time + ' in ns');
+    return (parseFloat(cache_total_time + main_memory_total_time + HDD_total_time).toFixed(2))
 }
-console.log("Total time in ns is " + main(0.3,0.8,18, 112, 20));
+
+// TESTS / QUESTIONS
+//console.log("Total time in ns is " + main_all_three(0.3,0.8,18, 112, 20)); // ANSWER 2800096.40 - THIS IS CORRECT
+//console.log("Total time in ns is " + main_all_three(0.5,0.7,15,45,10));
+//console.log("Total time in ns is " + main_cache_MM(0.9,0.1,46,337.6)); // ANSWER 79.76 - THIS IS CORRECT
+
+console.log((7 * 0.9) + (20 * 0.1)); // ANSWER IS 8.30
