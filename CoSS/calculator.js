@@ -52,3 +52,52 @@ function ms_to(affixTo, ms_amount) {
     }
     return value;
 }
+function hit_ration_MM(cache, main_memory) {
+    const total_memory = 1; // in percent
+    let remaining_memory =  total_memory - cache; // get remaining memory in percent
+    return (main_memory * remaining_memory * 100).toFixed(1) // returns % for main memory
+}
+function hit_ration_HDD(cache, main_memory) {
+    const total_memory = 1; // in percent
+    let remaining_memory =  total_memory - cache; // get remaining memory in percent
+    let main_memory_amount = (main_memory * remaining_memory); // returns % for main memory
+    return ((remaining_memory - main_memory_amount) * 100).toFixed(1) ;
+}
+
+// TOTAL TIME FUNCTIONS
+function calculate_cache(cache_speed, cache_ratio) {
+    return (cache_speed) * cache_ratio;
+}
+function calculate_MM(cache_speed, MM_speed, main_memory_ratio) {
+    return (MM_speed + cache_speed) * main_memory_ratio;
+}
+function calculate_HDD(cache_speed, MM_speed, HDD_speed_ms, HDD_ratio) {
+    // convert ms into ns
+    let HDD_speed_ns = ms_to('ns', HDD_speed_ms)
+    return (HDD_speed_ns + MM_speed + cache_speed) * HDD_ratio;
+}
+
+
+function main(cache, main_memory, cache_speed_ns, MM_speed_ns, HDD_speed_ms) {
+    // GET RATIOS
+    let cache_ratio = cache * 100;
+    let main_memory_ratio = hit_ration_MM(cache,main_memory);
+    console.log('Main Memory ratio is ' + main_memory_ratio);
+    let HDD_ratio = hit_ration_HDD(cache,main_memory);
+    console.log('HDD is ' + HDD_ratio);
+
+    // GET CACHE TOTAL SPEED
+    let cache_total_time = calculate_cache(cache_speed_ns, cache_ratio);
+    console.log(cache_total_time + ' in ns')
+
+    // GET MAIN MEMORY TOTAL SPEED
+    let main_memory_total_time = calculate_MM(cache_speed_ns, MM_speed_ns, main_memory_ratio);
+    console.log(main_memory_total_time + ' in ns')
+
+    // GET HDD TOTAL SPEED
+    let HDD_total_time = calculate_HDD(cache_speed_ns, MM_speed_ns, HDD_speed_ms, HDD_ratio);
+    console.log(HDD_total_time + ' in ns')
+
+    return cache_total_time + main_memory_total_time + HDD_total_time
+}
+console.log("Total time in ns is " + main(0.3,0.8,18, 112, 20));
