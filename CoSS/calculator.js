@@ -15,6 +15,7 @@ Enter this number   metric affix    notation    E-notation  Other
 1,000,000,000	    1G (giga)	    10^9	    1e9
 1,000,000,000,000	1T (tera)	    10^12	    1e12
  */
+
 function ns_to(affixTo, ns_amount) {
     let value;
     switch (affixTo) {
@@ -120,13 +121,19 @@ function main_all_three(cache, main_memory, cache_speed_ns, MM_speed_ns, HDD_spe
     return parseFloat(cache_total_time + main_memory_total_time + HDD_total_time).toFixed(2);
 }
 
-// TESTS / QUESTIONS
+// CACHE, MAIN MEMORY AND HDD TRANSFER CALCULATOR
 //console.log("Total time in ns is " + main_all_three(0.3,0.8,18, 112, 20)); // ANSWER 2800096.40 - THIS IS CORRECT
 //console.log("Total time in ns is " + main_all_three(0.5,0.7,15,45,10));
 //console.log("Total time in ns is " + main_all_three(0.3,0.1,7,34,12)); // ANSWER 7560030.80 - THIS IS CORRECT
+//console.log("Total time in ns is " + main_all_three(0.5,0.6,12,43,16)); // ANSWER 3200033.50 - THIS IS CORRECT
 
+// CACHE AND MAIN MEMORY TRANSFER CALCULATOR
 //console.log("Total time in ns is " + main_cache_MM(0.9,0.1,46,337.6)); // ANSWER 79.76 - THIS IS CORRECT
-console.log("Total time in ns is " + main_cache_MM(0.1,64,343.3)); // ANSWER 372.97 - THIS IS CORRECT
+//console.log("Total time in ns is " + main_cache_MM(0.1,64,343.3)); // ANSWER 372.97 - THIS IS CORRECT
+//console.log("Total time in ns is " + main_cache_MM(0.5,60,137.8)); // ANSWER 372.97 - THIS IS CORRECT
+
+// ####################################################################################################################
+// ####################################################################################################################
 
 
 // CLOCK CYCLE CALCULATOR
@@ -135,8 +142,13 @@ function clock_cycles(cache,main_memory,cache_hit_ratio) {
     let main_memory_speed = main_memory * (1 - cache_hit_ratio);
     return cache_speed + main_memory_speed;
 }
-console.log(clock_cycles(7,20,0.9)); // ANSWER IS 8.30
-console.log(clock_cycles(4,27,0.4)); // ANSWER IS 17.8
+//console.log(clock_cycles(7,20,0.9)); // ANSWER IS 8.30
+//console.log(clock_cycles(4,27,0.4)); // ANSWER IS 17.8
+//console.log(clock_cycles(4,23,0.8)); // ANSWER IS 17.8
+
+
+// ####################################################################################################################
+// ####################################################################################################################
 
 
 // IO DATA TRANSFER CALCULATOR
@@ -146,5 +158,11 @@ function IO_data_transfer(data,block_size, time_in_ms) {
     let total_time_ms = each_block_in_KB * time_in_ms;
     return ms_to('s', total_time_ms);
 }
-console.log(IO_data_transfer(3.1,11,14.8));
-console.log(IO_data_transfer(6.4,6,14.7));
+//console.log(IO_data_transfer(3.1,11,14.8));
+//console.log(IO_data_transfer(6.4,6,14.7));
+//console.log(IO_data_transfer(7.3,14,8.2));
+
+
+// ####################################################################################################################
+// ####################################################################################################################
+
