@@ -1,7 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="35ff3989-1fb4-4c0b-8b4f-2477640ddd8a" name="Default Changelist" comment="Fixed java folder">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codecademy/Intermediate_Java/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codecademy/Intermediate_Java/Generics/Interfaces/Box.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codecademy/Intermediate_Java/Generics/Interfaces/Replacer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codecademy/Intermediate_Java/Generics/Interfaces/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codecademy/Intermediate_Java/Generics/Intro/Container.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codecademy/Intermediate_Java/Generics/Intro/StringBag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codecademy/Intermediate_Java/Generics/Intro/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SP2-Exam-Prep/Exam2021/Q3a/Distancer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SP2-Exam-Prep/Exam2021/Q3a/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GitHub Clones.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GitHub Clones.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SP2-Exam-Prep/Exam2021/Q2/River.java" beforeDir="false" afterPath="$PROJECT_DIR$/SP2-Exam-Prep/Exam2021/Q2/River.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/COSSCW2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Arrays2D/ColumnMajor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Arrays2D/Combining.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Arrays2D/Exercise2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Arrays2D/Exercise3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Arrays2D/Introduction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Arrays2D/LoopPractice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Arrays2D/Modifying.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Arrays2D/NestedLoops.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Arrays2D/Project/ImageProcessing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Arrays2D/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Arrays2D/RowMajor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Debugging/AreaCalculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Debugging/Debug.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Debugging/Project/Fortune.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Inheritance_and_Polymorphism/Project/Language.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Inheritance_and_Polymorphism/Project/Mayan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Classes/Inheritance_and_Polymorphism/Project/SinoTibetan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Exam2021/Q1/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Exam2021/Q1/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Exam2021/Q1/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Exam2021/Q2/River.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Exam2021/Q2/StillWater.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Exam2021/Q2/WaterBody.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Exam2021/Q2/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Lesson_1/Iterations/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Lesson_1/Iterations/SolutionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Lesson_2/CyclicRotation/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Lesson_2/OddOccurrencesInArray/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pass_The_Technical_Interview/LinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pass_The_Technical_Interview/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/AiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/Ball.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/KL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/ML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/MainMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/PlayerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/Rect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/Text.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/Time.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Pong/Window.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GitHub/Problems/isPalindrome.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="27Z9Qg0iuleRodOkhhbgBfxamRw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/GitHub Clones" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/Birkbeck - Computing/Year 3/Software and Programming 2" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="editor.breadcrumbs" />
+  </component>
+  <component name="RunManager" selected="Application.Car">
+    <configuration name="Car" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Intermediate_Java.Car" />
+      <module name="GitHub Clones" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Intermediate_Java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exam2021.Q2.main" />
+      <module name="GitHub Clones" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exam2021.Q2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Car" />
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35ff3989-1fb4-4c0b-8b4f-2477640ddd8a" name="Default Changelist" comment="" />
+      <created>1649516727939</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649516727939</updated>
+      <workItem from="1649516731664" duration="240000" />
+      <workItem from="1649516984384" duration="1441000" />
+      <workItem from="1649519577877" duration="7439000" />
+      <workItem from="1649599119193" duration="100000" />
+      <workItem from="1649599251120" duration="34000" />
+      <workItem from="1649600670069" duration="67000" />
+      <workItem from="1649601168512" duration="14000" />
+      <workItem from="1649601247149" duration="5000" />
+      <workItem from="1649601559814" duration="459000" />
+      <workItem from="1649602244686" duration="8000" />
+      <workItem from="1649602407355" duration="485000" />
+    </task>
+    <task id="LOCAL-00001" summary="Fixed java folder">
+      <created>1649516835219</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1649516835219</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed java folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed java folder" />
   </component>
 </project>

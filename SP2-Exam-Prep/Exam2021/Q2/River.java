@@ -6,11 +6,6 @@ public class River extends StillWater {
     private StillWater waterBody;
 
     /* CONSTRUCTORS*/
-    public River(String name, boolean freshWater, String riverName, StillWater waterBody) {
-        super(name, freshWater);
-        this.riverName = riverName;
-        this.waterBody = waterBody;
-    }
     public River(String riverName, StillWater waterBody) {
         this.riverName = riverName;
         this.waterBody = waterBody;
