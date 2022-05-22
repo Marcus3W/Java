@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd4e3ce9-bd86-4f95-b8ee-3b2dbc85b823" name="Default Changelist" comment="Pong game - Finished">
-      <change afterPath="$PROJECT_DIR$/PS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Playground/COSSCW2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SP2-Exam-Prep/Exam2021/Q1/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SP2-Exam-Prep/Exam2021/Q1/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SP2-Exam-Prep/Exam2021/Q1/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SP2-Exam-Prep/Exam2021/Q2/River.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SP2-Exam-Prep/Exam2021/Q2/StillWater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SP2-Exam-Prep/Exam2021/Q2/WaterBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SP2-Exam-Prep/Exam2021/Q2/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GitHub.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GitHub.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +29,7 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="23JnPDrZo9OZkieIdj9airGMHPx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -52,9 +44,9 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Application.main">
@@ -91,17 +83,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PS.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/PS.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -132,6 +113,8 @@
       <workItem from="1648897567056" duration="3749000" />
       <workItem from="1649509649711" duration="2000" />
       <workItem from="1649509681421" duration="5763000" />
+      <workItem from="1649516437489" duration="47000" />
+      <workItem from="1650825749567" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="Pong game">
       <created>1641463850257</created>
