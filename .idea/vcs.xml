@@ -2,10 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/100Days" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BootStrap" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/JS" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Java" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MWAD" vcs="Git" />
   </component>
 </project>
