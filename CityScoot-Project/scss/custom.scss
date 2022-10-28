@@ -1,0 +1,191 @@
+/* Overridden CSS */
+$primary:           #55ad74;
+$primary-darker:    #3C7A52;
+$primary-darkest:   #316342;
+$primary-lighter:   #F3FBF3;
+$secondary:         #575a67;
+$secondary-darker:  #383A42;
+$secondary-lighter: #969BB3;
+
+
+// SASS FUNCTIONS
+$breadcrumb-divider: quote(">"); // from BS5 breadcrumb documentation
+$breadcrumb-bg: lighten($primary, 46%); // inspired from lecture example
+
+
+
+/* Custom CSS */
+
+// Created new padding to increase it to 5 REM
+.p-6 {padding: 5rem;}
+.pt-6, .py-6 {padding-top: 5rem;}
+.pr-6, .px-6 {padding-right: 5rem;}
+.pb-6, .py-6 {padding-bottom: 5rem;}
+.pl-6, .px-6 {padding-left: 5rem;}
+
+
+// FONT CUSTOMISATION: //
+
+// Custom links
+.link-dark {
+  color: $primary-darker;
+  display: block;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+.link-secondary {
+  color: $primary-darker;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+// Custom Display sizes to fit in with the web design
+.display-marc {
+  color: $primary-darker;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.display-5 {
+  color: $primary-darker;
+  font-size: 2.0rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.display-6 {
+  color: $primary-darker;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+// Lead bolding
+.lead-bold {
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+// Text color updates
+.text-primary-darker {
+  color: $primary-darker;
+}
+.bg-primary-lighter {
+  background-color: $primary-lighter;
+}
+
+// Line height adjustment - Idea from Tobi week 3 lecture
+.list-line-height {
+  line-height: 3;
+}
+.list-line-height-sm {
+  line-height: 2.5;
+}
+
+// added so i could have the button inline with the table text
+.btn-narrow {
+  display: inline-block;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.1rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+// Custom image CSS to ensure they each fit on the page correctly
+.banner {
+  height: 20vh;
+  min-height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/city-scoot-banner.jpg);
+}
+.rp-image {
+  height: 25vh;
+  min-height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/RP.jpg); // This image was taken by myself and I own the rights to use this image
+  background-position: center;
+}
+.np-image {
+  height: 25vh;
+  min-height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/NP.jpg); // This image was taken by myself and I own the rights to use this image
+  background-position: center;
+  background-position-y: 57%;
+}
+.tp-image {
+  height: 25vh;
+  min-height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/TP.jpg); // This image was taken by myself and I own the rights to use this image
+  background-position: center;
+  background-position-y: 57%;
+}
+.sp-image {
+  height: 25vh;
+  min-height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/SP.jpg); // This image was taken by myself and I own the rights to use this image
+  background-position: center;
+  background-position-y: 57%;
+}
+.logo-small {
+  width: 83px;
+  max-height: 91px;
+}
+.logo-normal {
+  width: 165px;
+  max-height: 181px;
+}
+.icons {
+  width: 50px;
+  max-height: 50px;
+}
+
+// Provide a break point between sections
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+// Table updates:
+.table-primary-dark {
+  background-color: $primary-darkest;
+  color: $primary-lighter;
+}
+
+// Button updates:
+.btn-primary-dark {
+  color: #fff;
+  background-color: $primary-darkest;
+  border-color: #55ad74;
+}
+
+// Container updates:
+// This will resize the map with in the modal
+.map-container iframe {
+  position:absolute;
+  height:100%;
+  width:100%;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+
+@import "../bootstrap/scss/bootstrap";
